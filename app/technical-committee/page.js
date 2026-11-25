@@ -5,5 +5,5 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <ComingSoonPage title="Technical Committee Members COMSYS 2027" />;
+  return <ComingSoonPage title="Technical Programme Committee 2027" />;
 }

@@ -5,5 +5,5 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <ComingSoonPage title="Publication COMSYS 2027" />;
+  return <ComingSoonPage title="Publication 2027" />;
 }
