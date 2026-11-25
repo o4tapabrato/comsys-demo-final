@@ -154,6 +154,17 @@ export default function Navbar() {
   const [openDropdown, setOpenDropdown] = useState(null); // "overview" | "previous" | null
   const navRef = useRef(null);
 
+  // Clicking the logo while already on the home page: scroll to top
+  // and tell the hero heading to replay its typing animation.
+  // (From other pages, the route change restarts it automatically.)
+  const handleLogoClick = () => {
+    setMobileOpen(false);
+    if (pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.dispatchEvent(new Event("replay-typing"));
+    }
+  };
+
   useEffect(() => {
     function handleClickOutside(event) {
       if (navRef.current && !navRef.current.contains(event.target)) {
@@ -175,7 +186,7 @@ export default function Navbar() {
       <nav className="backdrop-blur-md bg-slate-100 sticky md:hidden text-white top-0 z-[5011] w-full shadow-md shadow-white">
         <div className="subheading items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
           <div className="flex items-center justify-between py-2 md:py-5 md:block">
-            <Link href="/">
+            <Link href="/" onClick={handleLogoClick}>
               <Image
                 alt="COMSYS Logo"
                 width={500}
@@ -264,7 +275,7 @@ export default function Navbar() {
         className="bg-white z-[5011] sticky text-white top-0 w-full opacity-100 border-b shadow-md shadow-slate-400"
       >
         <div className="subheading hidden md:flex w-full max-w-7xl mx-auto items-center justify-between text-black font-semibold px-4 sm:px-2 lg:px-2 py-2">
-          <Link href="/">
+          <Link href="/" onClick={handleLogoClick}>
             <Image
               alt="Comsys Logo"
               width={1000}
