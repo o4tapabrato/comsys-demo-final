@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Meteors from "./Meteors";
+import TypingHeading from "./TypingHeading";
 
 export default function HeroBanner() {
   return (
@@ -18,9 +19,10 @@ export default function HeroBanner() {
           />
           <div className="flex flex-col justify-center text-center my-8 sm:my-12 relative z-10">
             <div className="flex justify-center items-center">
-              <h1 className="font-display text-center tracking-[-0.02em] drop-shadow-sm heading pr-5 text-4xl sm:text-8xl text-teal-400 font-extrabold">
-                COMSYS 2027
-              </h1>
+              <TypingHeading
+                text="COMSYS 2027"
+                className="font-display text-center tracking-[-0.02em] drop-shadow-sm heading pr-5 text-4xl sm:text-8xl text-teal-400 font-extrabold"
+              />
             </div>
             <p className="heading sm:text-2xl text-sm text-white sm:my-2 my-1">
               June 28 - 30 , 2027{" "}
@@ -63,9 +65,10 @@ export default function HeroBanner() {
           </div>
           <div className="flex flex-col justify-center text-center w-full relative z-10 px-4">
             <div className="flex justify-center">
-              <h1 className="font-display text-center tracking-[-0.02em] drop-shadow-sm heading text-5xl text-teal-400 font-extrabold">
-                COMSYS 2027
-              </h1>
+              <TypingHeading
+                text="COMSYS 2027"
+                className="font-display text-center tracking-[-0.02em] drop-shadow-sm heading text-5xl text-teal-400 font-extrabold"
+              />
             </div>
             <p className="heading sm:text-xl text-base text-white sm:my-2 my-4">
               June 28 - 30 , 2027{" "}
