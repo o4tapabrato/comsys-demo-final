@@ -295,7 +295,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="/"
-                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-lg font-medium transition-colors hover:bg-slate-200 hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none cursor-pointer"
+                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-lg font-bold transition-colors hover:bg-slate-200 hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none cursor-pointer"
                   >
                     Home
                   </Link>
@@ -316,7 +316,7 @@ export default function Navbar() {
                     }
                     aria-expanded={openDropdown === "overview"}
                     data-state={openDropdown === "overview" ? "open" : "closed"}
-                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 font-medium transition-colors hover:bg-slate-200 hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none cursor-pointer text-lg"
+                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 font-bold transition-colors hover:bg-slate-200 hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none cursor-pointer text-lg"
                   >
                     Overview{" "}
                     <ChevronDown
@@ -373,7 +373,7 @@ export default function Navbar() {
                     }
                     aria-expanded={openDropdown === "previous"}
                     data-state={openDropdown === "previous" ? "open" : "closed"}
-                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 font-medium transition-colors hover:bg-slate-200 hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none cursor-pointer text-lg"
+                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 font-bold transition-colors hover:bg-slate-200 hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none cursor-pointer text-lg"
                   >
                     Previous Conferences{" "}
                     <ChevronDown
@@ -405,7 +405,7 @@ export default function Navbar() {
                 <li className="text-lg">
                   <Link
                     href="/call-for-paper"
-                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-lg font-medium transition-colors hover:bg-slate-200 hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none cursor-pointer"
+                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-lg font-bold transition-colors hover:bg-slate-200 hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none cursor-pointer"
                   >
                     Call For Paper
                   </Link>
@@ -414,7 +414,7 @@ export default function Navbar() {
                 <li className="text-lg">
                   <Link
                     href="/registration"
-                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-lg font-medium transition-colors hover:bg-slate-200 hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none cursor-pointer"
+                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-lg font-bold transition-colors hover:bg-slate-200 hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none cursor-pointer"
                   >
                     Registration
                   </Link>
