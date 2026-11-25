@@ -92,9 +92,9 @@ export default function HomePage() {
           </h2>
           <ul className="flex flex-wrap gap-x-8 gap-y-4 justify-center p-4">
             <li>
-              <div className="sm:w-96 w-80 p-4 bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-indigo-950 dark:border-gray-700">
+              <div className="sm:w-96 w-80 p-4 bg-white border border-gray-200 rounded-lg shadow-xl">
                 <a href="#">
-                  <h5 className="sm:text-xl text-lg font-semibold text-gray-900 dark:text-white">
+                  <h5 className="sm:text-xl text-lg font-semibold text-gray-900 ">
                     Conference Registration Details COMSYS-2027
                   </h5>
                 </a>
