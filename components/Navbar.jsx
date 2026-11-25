@@ -26,19 +26,80 @@ import {
 } from "lucide-react";
 
 const overviewLinks = [
-  { name: "About Us", href: "/about" },
-  { name: "Gallery", href: "/gallery" },
-  { name: "How To Reach", href: "/how-to-reach" },
-  { name: "Places to Visit", href: "/places-to-visit" },
-  { name: "Important Dates", href: "/important-dates" },
-  { name: "Distinguished Speakers", href: "/distinguished-speaker" },
-  { name: "Accepted Papers", href: "/accepted-papers" },
-  { name: "Committee Members", href: "/committee" },
-  { name: "Technical Committee Members", href: "/technical-committee" },
-  { name: "COMSYS Special Session", href: "/special-session" },
-  { name: "Call for Special Session", href: "/call-for-special-session" },
-  { name: "Publication", href: "/publication" },
-  { name: "Call for Advertisement", href: "/call-for-advertisement" },
+  {
+    name: "About Us",
+    href: "/about",
+    description: "About Us page provides information about the conference",
+  },
+  {
+    name: "How To Reach",
+    href: "/how-to-reach",
+    description: "Page provides information about how to reach the conference",
+  },
+  {
+    name: "Gallery",
+    href: "/gallery",
+    description: "Gallery page shows images of the conference",
+  },
+  {
+    name: "Distinguished Speaker",
+    href: "/distinguished-speaker",
+    description:
+      "Distinguished Speaker page provides information about the speakers",
+  },
+  {
+    name: "Places to Visit",
+    href: "/places-to-visit",
+    description:
+      "Page provides information about the places to visit near the venue",
+  },
+  {
+    name: "Important Dates",
+    href: "/important-dates",
+    description:
+      "Important Dates page provides information about the important dates",
+  },
+  {
+    name: "Accepted Papers",
+    href: "/accepted-papers",
+    description:
+      "Accepted Papers page provides information about the papers that are accepted",
+  },
+  {
+    name: "Committee Members",
+    href: "/committee",
+    description:
+      "Committee Members page provides information about the committee members",
+  },
+  {
+    name: "Technical Committee Members",
+    href: "/technical-committee",
+    description:
+      "Technical Committee Members page provides information about the technical committee",
+  },
+  {
+    name: "Call for Advertisement",
+    href: "/call-for-advertisement",
+    description:
+      "Call for Advertisement page provides information about the advertisement",
+  },
+  {
+    name: "Call for Special Session",
+    href: "/call-for-special-session",
+    description:
+      "Call for Special Session page provides information about the special session",
+  },
+  {
+    name: "Publication",
+    href: "/publication",
+    description: "Publication page provides information about the publication",
+  },
+  {
+    name: "COMSYS Special Session",
+    href: "/special-session",
+    description:
+      "COMSYS Special Session page provides information about the special session",
+  },
 ];
 
 const previousConferences = [
@@ -58,16 +119,32 @@ const mobileLinks = [
   { name: "How To Reach", href: "/how-to-reach", icon: Plane },
   { name: "Places to Visit", href: "/places-to-visit", icon: Mountain },
   { name: "Important Dates", href: "/important-dates", icon: Calendar },
-  { name: "Distinguished Speakers", href: "/distinguished-speaker", icon: User },
+  {
+    name: "Distinguished Speakers",
+    href: "/distinguished-speaker",
+    icon: User,
+  },
   { name: "Accepted Papers", href: "/accepted-papers", icon: Newspaper },
   { name: "Committee Members", href: "/committee", icon: Users },
-  { name: "Technical Committee Members", href: "/technical-committee", icon: Contact },
+  {
+    name: "Technical Committee Members",
+    href: "/technical-committee",
+    icon: Contact,
+  },
   { name: "COMSYS Special Session", href: "/special-session", icon: Pin },
   { name: "Call for Paper", href: "/call-for-paper", icon: Megaphone },
-  { name: "Call for Special Session", href: "/call-for-special-session", icon: Pin },
+  {
+    name: "Call for Special Session",
+    href: "/call-for-special-session",
+    icon: Pin,
+  },
   { name: "Registration", href: "/registration", icon: ShieldCheck },
   { name: "Publication", href: "/publication", icon: BookDown },
-  { name: "Call for Advertisement", href: "/call-for-advertisement", icon: Megaphone },
+  {
+    name: "Call for Advertisement",
+    href: "/call-for-advertisement",
+    icon: Megaphone,
+  },
 ];
 
 export default function Navbar() {
@@ -223,7 +300,7 @@ export default function Navbar() {
                     type="button"
                     onClick={() =>
                       setOpenDropdown((prev) =>
-                        prev === "overview" ? null : "overview"
+                        prev === "overview" ? null : "overview",
                       )
                     }
                     aria-expanded={openDropdown === "overview"}
@@ -241,21 +318,30 @@ export default function Navbar() {
 
                   {openDropdown === "overview" && (
                     <div className="absolute left-0 top-full pt-1.5 z-50">
-                      <div className="w-[540px] rounded-md border bg-white p-4 text-slate-900 shadow-lg grid grid-cols-2 gap-1.5">
-                        {overviewLinks.map((item) => (
-                          <Link
-                            key={item.href}
-                            href={item.href}
-                            onClick={() => setOpenDropdown(null)}
-                            className={`block select-none rounded-md px-3 py-2 text-sm font-medium leading-none transition-colors hover:bg-slate-200 hover:text-cyan-700 ${
-                              pathname === item.href
-                                ? "bg-slate-100 text-cyan-700 font-semibold"
-                                : "text-slate-800"
-                            }`}
-                          >
-                            {item.name}
-                          </Link>
-                        ))}
+                      <div className="w-[640px] rounded-md border bg-white p-4 text-slate-900 shadow-lg grid grid-cols-2 gap-1.5">
+                        {overviewLinks.map((item) => {
+                          const isActive = pathname === item.href;
+                          return (
+                            <Link
+                              key={item.href}
+                              href={item.href}
+                              onClick={() => setOpenDropdown(null)}
+                              className={`block select-none rounded-md px-3 py-2.5 transition-colors hover:bg-slate-100 ${
+                                isActive ? "bg-slate-100" : ""
+                              }`}
+                            >
+                              {/* Bold title, always black */}
+                              <div className="text-base font-semibold leading-tight text-black">
+                                {item.name}
+                              </div>
+
+                              {/* Light description, clamped to 2 lines */}
+                              <p className="mt-1 text-sm font-medium leading-snug text-slate-500 line-clamp-2">
+                                {item.description}
+                              </p>
+                            </Link>
+                          );
+                        })}
                       </div>
                     </div>
                   )}
@@ -271,7 +357,7 @@ export default function Navbar() {
                     type="button"
                     onClick={() =>
                       setOpenDropdown((prev) =>
-                        prev === "previous" ? null : "previous"
+                        prev === "previous" ? null : "previous",
                       )
                     }
                     aria-expanded={openDropdown === "previous"}
