@@ -44,20 +44,23 @@ export default function TypingHeading({
   }, [text, speed, startDelay]);
 
   return (
-    <h1 className={`relative ${className}`} aria-label={text}>
-      {/* Invisible full text: reserves the final width so the logos
-          and the rest of the banner don't move while typing */}
-      <span className="invisible whitespace-pre" aria-hidden="true">
-        {text}
-      </span>
+  <h1 className={`relative ${className}`} aria-label={text}>
+    {/* Hidden placeholder: reserves the final width, never visible */}
+    <span
+      aria-hidden="true"
+      className="whitespace-pre"
+      style={{ visibility: "hidden" }}
+    >
+      {text}
+    </span>
 
-      {/* Visible typed text, centered, so it re-centers as it grows */}
-      <span
-        className="absolute inset-0 flex items-center justify-center whitespace-pre"
-        aria-hidden="true"
-      >
-        {text.slice(0, count)}
-      </span>
-    </h1>
-  );
+    {/* Visible typed text, centered, so it re-centers as it grows */}
+    <span
+      aria-hidden="true"
+      className="absolute inset-0 flex items-center justify-center whitespace-pre"
+    >
+      {text.slice(0, count)}
+    </span>
+  </h1>
+);
 }
