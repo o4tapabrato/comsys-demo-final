@@ -27,7 +27,7 @@ export default function HeroBanner() {
             <p className="heading sm:text-2xl text-sm text-white sm:my-2 my-1">
               June 28 - 30 , 2027{" "}
               <br />
-              {" "}VENUE : The Alan Turing Institute, London, UK and Linacre College, Oxford, UK
+              {" "}
             </p>
           </div>
           <Image
@@ -73,7 +73,7 @@ export default function HeroBanner() {
             <p className="heading sm:text-xl text-base text-white sm:my-2 my-4">
               June 28 - 30 , 2027{" "}
               <br />
-              {" "}VENUE : The Alan Turing Institute, London, UK and Linacre College, Oxford, UK
+              {" "}
             </p>
           </div>
         </div>

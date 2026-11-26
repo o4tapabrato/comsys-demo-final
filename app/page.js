@@ -85,7 +85,7 @@ export default function HomePage() {
       <Carousel />
 
       {/* Latest News */}
-      <div className="p-4 bg-sky-500">
+      {/* <div className="p-4 bg-sky-500">
         <div className="paragraph p-4 m-auto flex justify-center flex-col max-w-7xl">
           <h2 className="subheading text-center mb-4 sm:text-4xl text-2xl text-teal-100 font-semibold">
             Latest News
@@ -133,7 +133,7 @@ export default function HomePage() {
             </li>
           </ul>
         </div>
-      </div>
+      </div> */}
 
       {/* Tracks */}
       <div className="m-auto flex justify-center flex-col max-w-7xl my-8 p-4">
